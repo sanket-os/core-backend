@@ -1,33 +1,87 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        System.out.println("hello world");
-
-        Thread thread = Thread.currentThread(); // manual thread creation
-
-        System.out.println(Thread.currentThread().getName());
-//      In Java, even main() runs inside a thread called: main
-
-        for (int i = 0; i < 100; i++) {
-            NumberPrinter numberPrinter = new NumberPrinter(i); // each iteration creates a task obj
-            //  numberPrinter.run();
-
-
-            Thread newThread = new Thread(numberPrinter); // this creates a new OS level thread
-//            newThread.run();
-            //  This is just a normal method call.
-            //  NO new thread is created.
-            //  Everything runs on: main thread
-
-            newThread.start();
+//        System.out.println("hello world");
+//
+//        Thread thread = Thread.currentThread(); // manual thread creation
+//
+//        System.out.println(Thread.currentThread().getName());
+////      In Java, even main() runs inside a thread called: main
+//
+//        for (int i = 0; i < 100; i++) {
+//            NumberPrinter numberPrinter = new NumberPrinter(i); // each iteration creates a task obj
+//            //  numberPrinter.run();
+//
+//
+//            Thread newThread = new Thread(numberPrinter); // this creates a new OS level thread
+////            newThread.run();
+//            //  This is just a normal method call.
+//            //  NO new thread is created.
+//            //  Everything runs on: main thread
+//
+//            newThread.start();
 //            This:
 //            Creates a new thread
 //            JVM asks OS for a new thread
 //            OS schedules it independently
 //            That thread internally calls run()
+
+
+            NumberDoubler numberDoubler = new NumberDoubler(100);
+            ExecutorService executorService = Executors.newFixedThreadPool(2);
+            Future<Integer> integerFuture =  executorService.submit(numberDoubler);
+//        Main thread hands the task to the executor.
+//        Executor Places task in queue:
+//        Task Queue
+//        │
+//        └── NumberDoubler(100)
+//        One worker thread picks it up: and executes: return 100 * 2; 200
+
+
+//            while(true) {
+//                System.out.println(integerFuture.isDone());
+//                Thread.sleep(100);
+//            }
+
+        // this defines the state of our task
+        while(integerFuture.state() != Future.State.SUCCESS) {
+            System.out.println(integerFuture.isDone());
+
+//            future.state() - Possible states:
+//            RUNNING
+//            SUCCESS
+//            FAILED
+//            CANCELLED
+
+//           For modern java future.state() is better than .isDone()
+//           because you know why the task finished.
         }
+
+
+//        Without Future:
+//        Integer result = task.call();
+//        Main thread would execute task itself.
+//        No concurrency.
+
+//        With Future:
+//        Future<Integer> future = executor.submit(task);
+//        Task runs elsewhere.
+//        Main thread remains free. This is the real power of Future.
+        System.out.println(integerFuture.get());
+
+//        Callable = Work that returns a value
+//        ExecutorService = Runs the work
+//        Future = Handle to the future result
+
+        // Blocking call -> Main thread won't proceed until
+        // the thread completes execution for integer future.
+        executorService.shutdown();
 
     }
 }
