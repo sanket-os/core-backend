@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Core Backend Project.iml" filepath="$PROJECT_DIR$/.idea/Core Backend Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/LibraryManagementSystem/LibraryManagementSystem.iml" filepath="$PROJECT_DIR$/LibraryManagementSystem/LibraryManagementSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/Third_project/Third_project.iml" filepath="$PROJECT_DIR$/Third_project/Third_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/producerConsumer/producerConsumer.iml" filepath="$PROJECT_DIR$/producerConsumer/producerConsumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/secondProject/secondProject.iml" filepath="$PROJECT_DIR$/secondProject/secondProject.iml" />
     </modules>
   </component>
