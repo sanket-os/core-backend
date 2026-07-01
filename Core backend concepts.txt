@@ -1,0 +1,587 @@
+- Things that are remaining from my side 
+- nodejs interview, Cortex DSA, DSA interview and contest
+- core backend course and contest for MS credits
+- data engineering course and contest for MS credits
+- HLD course and interview
+- build projects for resume and jobs
+- ask for MLOps course content recordings to support team
+
+- complete data engineering first because the access to the NuvePro Lab is limited and expires on 15 May
+- lab access has been revoked from scaler side, complete the backend module and then ask for lab access to support team if they give you the access then complete the project on that lab for data engineering
+
+
+
+-----------------------------------------------------------------------
+
+
+
+Intro to core backend LLD
+
+- make projects from scratch from the start using AI and the tools available
+- know best practices & requirements, clean & readable code writing
+- after above things learn about scaling, CI/CD & devops
+
+- for DSA give contest and identify your weak spots and cover them
+- watch lectures again for Advanced DSA 3 & 4 if required
+- solve scaler cortex problems & contests
+
+- learn system design from hello interview, refactoring guru
+- read books and blogs, youtube videos, small courses on udemy & coursera
+- do not rely on a single resource for everything 
+- libgen is the platform to get books for free
+
+- give nodejs backend mock interview along with the core backend
+- it will prepare you for core backend as well 
+
+- horizontal scaling, vertical scaling, load balancers, coding principles and concepts
+
+
+_______________________________________________________________________
+
+
+
+Core Backend Lecture 1
+
+Backend LLD: OOP-1: Intro to LLD and OOP
+
+- when humans think in real world, they always think about objects first
+- when we talk, we talk about an object doing some kind of action or a behavior
+- similar to this in object oriented programming we are trying to simulate the real world experience of using a language in our day to day life
+
+- object orientation and functional programming are quite different
+- procedural programming is a part of functional programming where sequence is important for a program 
+- functional programming becomes difficult to manage after a certain scale and that is where Object orientation comes in
+
+- in functional programming we can write many functions, functions inside of other functions, we can assign a function to the variable
+- in object orientation, we have an object in front of us and everything we write revolves around that object, this becomes easy to manage for coders after a certain scale, it reduces complexity and ambiguity 
+
+- object orientation is all related to the classes
+- every object/entity has data and behavior(actions that they perform)
+
+- object is something that exists in real life, it occupies real memory
+- object is an instance made out of class, class does not have any real value to it, it’s just existing and lying down there like a blueprint
+
+- we can have multiple constructors in a class
+
+Class -> attributes, constructor, behaviors
+
+Objects are created using class
+
+Constructors are of two types - parameterized and default, they don’t return anything, they are called automatically when object is created. It is used for initialization, performing some tasks and validation while creating the object
+
+Encapsulation - providing or limiting the access using access modifiers for everything
+4 types of access modifiers 
+
+Watch the git video to code along with instructor during lecture 
+
+
+________________________________________________________________________
+
+
+
+Core Backend Lecture 2 
+
+Access Modifiers and Constructors
+
+Do not rely on your instructors and lectures completely, it has many mistakes. Always do the crosschecks with authentic resources
+
+- software code is trying to mimic or replicate real world scenarious to make our lives easier
+- blueprint of an entity is nothing but us trying to replicate a real world scenario in class
+
+- we have transient, faster, volatile memory that is called as RAM, when we compile the code it gets uploaded into the RAM 
+- inside the memory the code gets into heaps and stacks and code objects  
+- when program is executing during the runtime, the object is created with real attributes and behaviours which takes space in memory whereas a class is just a blueprint it doesnt take much memory
+- program under execution is a process
+
+- pillars of OOPS are encapsulation, inheritance and polymorphism
+
+- encapsulation holds data, methods and protects it from outer interference which enables abstraction later on
+
+- look at the memory managment notes or lecture from Bhavik Dand if there is any important concept
+
+- enable github education for your account
+
+- constructor is a special function/ method which initializes the attributes of an object
+- when object is getting created that is when constructor method is called
+
+- constructor method does not return anything
+- you can think that constructor is a method that returns an object of same class type
+
+- constructors have access modifiers as well, it is public by default
+
+- code does occupy space but compared to objects it is far less, objects can cause memory overflow but never the code
+
+- along with default constructors there are user defined constructors and copy constructors as well
+
+- we can access and copy private attributes inside of copy constructor with the help of "other" keyword
+
+- shallow copy is created when we are referencing to the same address, and when we change the attribute it will reflect in original part or vice versa
+
+- deep copy is created recursively where we create a whole new instance at new address which is completely unrelated to the original part
+
+- deep & shallow copy have pros and cons depending on where you use them
+
+- destructor in java is finalise() which clears out memory
+- it is deprecated now
+- java has inbuilt garbage collector unlike C++ which clears out memory
+
+- there are private constructors as well, but where do we use them ?
+
+- in java everything is pass by value, why & how?
+
+Java is ALWAYS pass by value.
+
+But:
+Type		What gets copied	Effect
+int, double	actual value		no change outside
+object		reference (address)	object can change
+
+
+________________________________________________________________________
+
+
+
+Core Backend Lecture 3 
+
+Inheritance and Polymorphism
+
+- write the code for shallow and deep copy, copy constructors can copy private attributes, how ? etc from last class
+
+- in java protected access modifier allows access to the behaviours in 
+same class & subclass, same package, subclass in different package
+- but not in different subclass and different package
+- protected = package-level access + inheritance-based access
+
+- In different packages, protected members are accessible only through subclass reference, not parent reference
+- You want subclasses to reuse behavior
+- But don’t want full public exposure
+
+- super → refers to parent class part of the same object
+- Parent and child have same variable names
+- Or child overrides a method using super.display just like this.display
+
+- Static methods → compile-time binding → no overriding
+- only overloading and method hiding is allowed
+
+- Static methods are resolved at compile time
+- Based on reference type, not object type
+- This is called method hiding, NOT overriding
+
+- Java picks the most specific compatible method based on data types
+
+- Integer => object (autoboxing), int => primitive data type
+- Java caches Integer objects in range: -128 to 127
+- both have different usecases
+
+
+Overloading → “Same name, different inputs”
+Overriding → “Child changes behavior”
+Method Hiding → “Static version replaced, not overridden”, Static illusion, not real polymorphism
+
+- Calling of overloaded methods is decided at compile time
+- Calling of overridden methods is decided at runtime.
+
+- instance method belongs to objects
+- static method belongs to class
+
+- a method signature is the combination of the method name and its parameter list (including the number, types, and order of parameters).
+
+- void add(int a, double b)
+- Signature: add(int, double)
+
+- A method signature does NOT include: 
+return type
+access modifiers (public, private)
+static, final, etc.
+parameter names
+
+
+- in java everything is pass by value
+- when we pass a primitive data type, we pass a simple value, not a variable
+- it has no address associated with it
+- but in case of an object or non primitive data types, we pass an actual address associated with that value
+- it is a value but it has an address associated with itself
+- hence everything in java is pass by value not reference
+
+- primitive data types like int, bool, float are not stored in heap, it is stored in stack according to Rahul's guess
+- but in case of an object, there are many things involved, it is stored in bytes
+- object has many addresses inside of it which requires more memory 
+- hence objects are stored inside of heap memory which has addresses associated with them in variables
+
+Java is always pass-by-value, but:
+For primitives → actual value copied
+For objects → reference value copied
+That’s why shallow copy issues happen.
+
+- deep copy is created recursively and operating on it takes a lot of heap space which can lead to stack overflow
+- shallow and deep copy have their own pros and cons and usecases
+
+- shallow copy => Very fast, Low memory usage, Simpler to implement,
+Dangerous side effects, Hard to debug, Breaks encapsulation, Not safe for mutable objects
+
+- deep copy => Full independence, No side effects, Safer for real-world systems, Better encapsulation, Slower, More memory usage, Complex to implement, Overkill in many cases
+
+- inheritance is same as inheriting the attributes and behaviors of a parent class
+- a child can have its own attributes and behaviour as well
+- inside of protected access modifier we use inheritance, how ?
+- read about protected access modifier
+
+- protected allows a subclass to access parent members even in a different package, but only through inheritance
+- In a different package, protected members are accessible only through the subclass itself, not through parent references
+- it gives controlled exposure to child class
+
+
+Poly - many
+Morph - forms
+
+- in inheritance we can overwrite methods, not attributes of a parent class
+- for e.g. a bird is an object, now pigeon and sparrow are also two objects of a bird class, but they have their own behaviours and attribute forms
+- only at the runtime we can decide which method to call depending on what object we pass on to it is known as runtime polymorphism
+
+- we can only call the methods that are defined inside of that class 
+- we cannot call the methods defined inside of a child class from parent class
+- we can call method inside parent class from child class, it is called runtime polymorphism but not vice versa
+- it is called as method overriding of parent class
+
+- watch that git video from 1st class
+- get github education access if you can
+
+- compile time polymorphism is also known as method overloading 
+- at compile time the compiler is going to decide which method the call is going to head to is method overloading
+- I call one api & that one api is responsible for multiple different function calls & different behaviours
+
+- return types dont change the signature of the method
+- what is signature ?
+- void hello() and int hello() 
+Whats the difference ?
+
+- in runtime polymorphism the methods are overriden not values
+
+- read about interfaces in java and diamond problem
+
+- I think rather than going through the Head First book and courses, understand the concepts from the AI, it is much better and faster way
+to do it
+- if AI can't do it then refer the book or course
+
+- IBM Java Developer Professional Certificate course is most related to your module and has gen AI for developers included in it
+
+- Object Oriented Programming in Java Specialization from Duke & UC San
+Diego is another in depth intermediate course, no project
+
+- Java Programming and Software Engineering Fundamentals Specialization
+course is a bit old but it has a project
+
+- if you want to build the project and learn how to use generative AI
+then take a look at courses
+
+- if you are going to learn data engineering Python is a must, java is 
+not used for that
+- angela Yu's 100 days of Python code would be a good resource
+
+
+_________________________________________________________________________
+
+Implement in IntelliJ the following code examples for clarity
+Use simple examples with comments
+
+- private constructor, parameterized and default
+- encapsulation using all 4 types of access modifiers
+- inheritance
+
+- runtime polymorphism and compile time polymorphism
+- overriding, overloading and method hiding
+- interfaces
+
+Revise JS, React, NodeJS for interview
+
+_________________________________________________________________________
+
+
+
+Core Backend Lecture 3 
+
+Interfaces and Abstract Classes
+
+- while asking AI about java concepts, prompt it to use modern Java & avoid deprecated and old concepts
+- also tell AI to ask questions while explaining a concept
+
+- plan about completing degree, course, projects, interview and job application in next 2 months otherwise you will waste much time behind non important stuff
+- focus on discipline, sleep, mental clarity, overall health, emotional well being, socialising, family and friends time etc
+- all of these things will compound towards your goal, dont ignore them
+
+
+- static variables & methods, what are those ?
+- what are interfaces ?
+
+- static = "This belongs to the class, not to individual objects"
+- static variables and methods are shared across all the obj's created out
+of that class
+- static methods cannot access instance variables because they belong to that object
+- you can pass variables as obj parameters to static methods to access them
+
+
+- memory management ? Heaps and stacks ?
+- stack is a execution memory (temporary, fast, small, per-thread)
+- stack overflow can happen if memory exceeds via deep recursion or something else,
+- heap is a data storage memory (objects, shared, slow, large, GC-managed)
+- obj's are not stored in stack, only references are
+- memory leaks happen in java if you keep references alive in heap
+
+Stack = current task list
+Heap = warehouse of data
+
+Pick a task → stack
+Use tools/data → heap
+Finish task → removed from stack
+Unused tools → cleaned later (GC)
+
+- A thread is a single path of execution inside a program.
+- Thread = independent execution unit
+- Stack = private to thread
+- Heap = shared across threads
+
+- A thread is a worker that executes code independently, with its own 
+stack but shared heap.
+
+
+- interfaces are the rules that one must follow
+- classes follow those rules in order to complete a certain goal
+- abstract classes have abstract methods and default methods
+- we use "implement" keyword to use interfaces
+
+- java doesn't allow multiple inheritance
+- inheritance uses "extends" keyword
+- this is where interfaces do its magic
+
+- static methods are independent of objects
+- they belong to a class
+- static methods can call other static methods
+- you can call them anywhere
+- Anyone can use it
+- No ownership
+- No personal state
+
+- Instance methods need object
+- Belongs to your obj
+- Has your data
+ 
+- abstract methods must exist inside of a abstract class or an interface
+- abstract method is an empty method which relies on other classes to do its job
+- no body, just declaration
+- concrete child class MUST implement it
+
+- why abstract method ?
+- You know the action is required
+- But each subclass will do it differently
+
+- abstract methods force structure, allow flexibility
+
+- inside an interface all methods are public and abstract by default
+
+- you cant create an obj from abstract class
+- You can have a reference of abstract class type
+- you can create an anonymous class from it like
+Animal a;
+- where you are
+creating a subclass on the spot
+completing the missing method
+
+
+FORGET ABOUT CAREER, DEGREE, MARKS, AND JOB. JUST DO IT FOR THE FUN & JOY OF IT. 
+
+THINGS WILL BE BETTER OFF THIS WAY, TRUST ME.
+
+
+- the constructor of the abstract class is not for creating the object - it is there to initialize the attributes of the child class from parent class
+
+- static variable, method means it is created before the class
+- every class and subsequent object created out of it will be able to access this static variable 
+- because it is there even before the obj is created
+
+- once initialized that value remains fixed when we use "final" keyword
+
+- Library management system is asked frequently in lld backend interviews
+- complete the implementation of this small project
+
+https://docs.google.com/document/d/1wmd_QvGOZfbcOrD5SE-cfg0yb6-cGdM8ctd3R8nEH8Q/edit?usp=sharing
+
+
+___________________________________________________________________________
+
+
+Remember that time when everyone around you was thinking it is waste of time and it's not going to work, there were some folks who put their head down and worked. 
+
+Those were the one's that were placed first and if it doesn't work out, you move on and put your head down once again and learn something new that will work over time. 
+
+Each hard work will connect all the dots over time and you will be grateful that you did not give up and followed through with optimism and resilience.
+
+___________________________________________________________________________
+
+
+
+Core Backend Lecture 4
+
+
+Concurrency - 1: Introduction to Processes and Threads
+
+
+- code > compile > stored in HDD > in .exe format > run that file > code starts executing in RAM > program under execution > process
+
+- process is a program under execution
+- a single process has a Programmable Controller Block inside of a RAM 
+- PCB has a register, data bus, instruction set, heap and stack memory 
+
+- a single process has many threads 
+- a thread is a basic unit of CPU execution
+- CPU executes a thread not process
+
+- in java you always have one main thread running
+- each thread has its own stack and program counter
+- so when many threads are running they dont wait for each other to get finished
+- they run in a async manner
+- all threads share the heap memory
+
+- threads are quite lightweight because they do not have much overhead to them 
+- threads do not have heap data, instructions associated with them hence you just have to run them
+
+- refer to the diagrams in the lecture pdf for clarity
+- threads can communicate with each other using heap memory and different mechanisms like locks, semaphores, etc.
+
+- context switching happens inside of a CPU where registers, counters are present not inside of RAM
+- if there are many threads and one thread does some work and it preempts (stops and moves to next one) to the next 
+- next one does the same thing and preempts to its next thread
+- in such manner many threads work together
+
+-  in context switching we store and restore the state so that later we can pick up from where we left
+- if there are many threads running we can get a large amount of context switching which can be noticeable
+- otherwise context switching takes negligible time in a process
+- 8 threads per one core is a standard that is followed in industry
+
+- you have to choose moderate switching. Not too less or too more switching to get good performance and user experience
+
+- parallelism mean doing many things at the same time in multi core CPU's
+- concurrency means doing many things step by step in a given time to reach a destination
+- this happens in single core CPU
+
+- without context switching there is no concurrency
+- concurrency is an illusion of parallelism 
+- this illusion needs context switching
+
+- concurrency can happen on multiple core and single core
+- parallelism needs multiple core
+- it cannot happen on single core
+
+- concurrency is always accompanied by parallelism in multi core CPU
+- they work together to get the best performance out of each thread
+
+- threads are executed in asynchronous manner
+
+- Runnable is the interface that acts like a intermediary between your class and thread object
+
+https://www.scaler.com/topics/operating-system/threads-in-operating-system/
+
+- while using threads and hyperthreading we should be careful of using number of threads 
+- use threads in a frugal manner for limited memory usage
+
+- Modern Java concepts to learn
+ 
+ExecutorService
+↓
+CompletableFuture
+↓
+Virtual Threads
+
+
+
+______________________________________________________________________
+
+
+
+
+Core Backend Lecture 5
+
+Executables and callables
+
+- for contest prepare for multithreading, interfaces & abstract classes 
+
+- runnable is something that we execute like printing or computing, it does not return anything
+- callables is something that we call and get a return value when the certain task is complete 
+- you might get that value at that point but you move forward and execute next part of the code it is non blocking in nature
+- when we do .get() call on that callable func, until that task gets completed we have to wait for the value to get returned to resume the current task
+- until then we have to wait hence .get() is blocking in nature as we have to wait and in the future that value will come to us
+
+- callable functions run on separate threads and are async
+- from .get() call onwards we get a sync code
+
+- we use generics for callable part which retuns us the value in any required data type
+- we can resue this code many times depending upon different types
+- type is not fixed in generics as per my understanding right now
+
+- watch lecture in one go and type out the notes later on
+- pause the video for writing coding examples, important concept names, links and resources etc
+
+- after you finish the lecture you can take notes mostly in the code editor and push it on github repo
+- this is much more efficient way of learning
+- make sure to include necessary vocabulary in your notes to make explanations much more comprehensive and easy to understand
+- along with real life examples
+- star pattern is defining a problem, how the problem is affecting your process, define a solution approach to the problem and in the end explain how your solution will help with your issue
+
+- deep copy and shallow copy code, explanations need more notes 
+- do it sooner
+
+- listenable futures, completable futures, generics, callables
+
+
+
+_______________________________________________________________________
+
+
+
+Core backend lecture 6
+
+Introduction to synchronization
+
+- call function in runnable and callable
+
+- blockingQueue and lock
+- wait and notify - abstraction in blockingQueue
+- threadsafe
+- preempting thread after if condition
+- next thread passes through if condition resulting in error
+
+- locks block all except for one hence not utilising all threads, error occurs
+- semaphores allows some and avoids other threads
+
+- remove locks part in code of store file in semaphores
+
+ https://github.com/rahulgrover99/adaptive-batch
+
+- ? => list, arraylist
+
+
+______________________________________________________________________
+
+
+
+Core backend lecture 7
+
+Synchronization with semaphores
+
+- webcrawlers
+- lambda function
+
+- leetcode problem
+https://leetcode.com/problems/print-zero-even-odd/description/
+
+
+______________________________________________________________________
+
+
+
+
+
+
+
+
+
+

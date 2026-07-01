@@ -186,10 +186,84 @@ public class LibraryManagementSystem {
                             + book1.getTitle()
             );
 
-
-
         }
 
-
-
 }
+
+
+//===== BOOK INVENTORY =====
+//------------------------
+//Title: Java Programming
+//Author: James Gosling
+//Type: TEXTBOOK
+//Available: true
+//Subject: Programming
+//
+//------------------------
+//Title: Data Structures
+//Author: Robert Lafore
+//Type: TEXTBOOK
+//Available: true
+//Subject: Computer Science
+//
+//------------------------
+//Title: Harry Potter
+//Author: J.K. Rowling
+//Type: NOVEL
+//Available: true
+//Genre: Fantasy
+//
+//------------------------
+//Title: The Hobbit
+//Author: J.R.R. Tolkien
+//Type: NOVEL
+//Available: true
+//Genre: Fantasy
+//
+//
+//===== REGISTERED USERS =====
+//---------------------------------
+//Name: Sam
+//Type: Member
+//Borrowed Books: 0
+//
+//---------------------------------
+//Name: Rahul
+//Type: Member
+//Borrowed Books: 0
+//
+//---------------------------------
+//Name: Admin
+//Type: Librarian
+//Borrowed Books: 0
+//
+//
+//===== SEARCH RESULT =====
+//------------------------
+//Title: Java Programming
+//Author: James Gosling
+//Type: TEXTBOOK
+//Available: true
+//Subject: Programming
+//
+//
+//===== SEARCH BY TYPE =====
+//------------------------
+//Title: Harry Potter
+//Author: J.K. Rowling
+//Type: NOVEL
+//Available: true
+//Genre: Fantasy
+//
+//
+//===== LENDING =====
+//Sam borrowed Java Programming
+//Java Programming is already lent.
+//Data Structures is already lent.
+//
+//===== RETURN =====
+//Before Return: false
+//Java Programming returned successfully.
+//After Return: true
+//Rahul borrowed Java Programming
+//
