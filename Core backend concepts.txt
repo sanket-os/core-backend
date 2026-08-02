@@ -9,6 +9,9 @@
 - complete data engineering first because the access to the NuvePro Lab is limited and expires on 15 May
 - lab access has been revoked from scaler side, complete the backend module and then ask for lab access to support team if they give you the access then complete the project on that lab for data engineering
 
+take a look at udemy courses of applying for jobs that i purchased for
+my brother
+
 
 
 -----------------------------------------------------------------------
@@ -576,6 +579,11 @@ https://leetcode.com/problems/print-zero-even-odd/description/
 
 ______________________________________________________________________
 
+
+
+- what is arraylist and list ?
+- what is public static void main(String[] args) ?
+- revise upcast and downcast in polymorphism 
 
 
 
