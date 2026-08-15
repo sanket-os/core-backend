@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Core Backend Project.iml" filepath="$PROJECT_DIR$/.idea/Core Backend Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/Generics/Generics.iml" filepath="$PROJECT_DIR$/Generics/Generics.iml" />
       <module fileurl="file://$PROJECT_DIR$/LibraryManagementSystem/LibraryManagementSystem.iml" filepath="$PROJECT_DIR$/LibraryManagementSystem/LibraryManagementSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StreamsLambdasExceptions/StreamsLambdasExceptions.iml" filepath="$PROJECT_DIR$/StreamsLambdasExceptions/StreamsLambdasExceptions.iml" />
       <module fileurl="file://$PROJECT_DIR$/Third_project/Third_project.iml" filepath="$PROJECT_DIR$/Third_project/Third_project.iml" />
       <module fileurl="file://$PROJECT_DIR$/producerConsumer/producerConsumer.iml" filepath="$PROJECT_DIR$/producerConsumer/producerConsumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/secondProject/secondProject.iml" filepath="$PROJECT_DIR$/secondProject/secondProject.iml" />
