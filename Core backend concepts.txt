@@ -587,9 +587,45 @@ ______________________________________________________________________
 
 
 
+________________________________________________________________________
 
 
 
+Core backend 1 fundamentals final lecture 
 
+
+Exception handling & miscellaneous topics for contest and interviews -
+
+OOPS
+Class
+Objects
+Encapsulation -> Access Modifiers, Constructors (Copy, parametrized)
+Polymorphism -> Runtime, compile time
+Inheritance -> Overriding
+Abstract classes vs Interfaces
+-- Concurrency
+Thread vs Processes
+what is shared between threads
+Concurrency vs parallelism
+Executor Services => Thread pools
+synchronized
+sync a(), sync b(), c -> class X -> x1.a and x1.b can't be in parallel. x1.a and x1.c can run together.
+x1.a and x2.a can also run together
+static
+semaphores => limiting the number of threads inside critical section
+-- Java advanced concepts
+Collections
+Lambdas
+Streams
+
+
+- https://www.interviewbit.com/java-interview-questions/
+
+
+- https://docs.google.com/document/d/1ZlyaLt7-KM0Wnz_e9h05MDxzWfKxk3xFkJVy5MnUXGY/edit?tab=t.0 
+
+
+
+___________________________________________________________________________
 
 

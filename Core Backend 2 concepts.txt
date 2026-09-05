@@ -1,0 +1,142 @@
+Core Backend 2 
+
+DRY => Don't repeat yourself principle
+
+"Program to an interface, not an implementation" is a fundamental software
+ design principle which states that your code should depend on abstract 
+contracts (interfaces or abstract classes) rather than concrete execution 
+details (classes).
+
+Good design tries to achieve this:
+
+New requirement
+      ↓
+Small localized change
+      ↓
+Existing code remains stable
+      ↓
+Less chance of bugs
+
+SOLID Principles
+
+S => Single Responsibility Principle
+O => Open to extension / Closed to modification - Open/Closed Principle
+L => Liskov's Substitution Principle
+I => Interface Segregation Principle
+D => Dependency Inversion Principle
+
+
+
+All of these five principles are not followed as a strict practice while
+coding. We use these as a framework and apply them where we need them as 
+a guide. It is about managing change and avoid unnecessary coupling
+
+
+Single Responsibility Principle - 
+A class should have only one responsibility or one reason to change
+itself. A class should not contain many methods, behaviors that will
+make it change itself frequently. It does not mean it should have only
+one responsibility or concern.
+
+
+Open to extension / Close to modification (Open/Closed Principle) - 
+When we make any changes to our code, we should be able to add new code
+without modifying the previously tested code. It will introduce more errors
+ and unknown behaviors in the future. 
+We achieve this using abstract methods and interfaces. It becomes easy
+to add new methods or classes with the help of interfaces and not change
+our previous code.
+SOLID should make your code simpler to change—not unnecessarily
+ complicated.
+
+
+Liskov's Substitution Principle - 
+Objects of a subclass should be replaceable with objects of their
+ superclass without breaking the program's expected behavior.
+If there are many behaviors inside of a class for a certain task, it makes
+sense that all of the children of that class may not exhibit that kind of 
+a behavior. A penguin belongs to a bird class but it cannot fly like
+other birds. So flying behavior is not exhibited by penguins. 
+
+UPI payment & Debit card payment
+
+
+Interface Segregation Principle - 
+A single interface should not have many methods inside it. We should have
+separate interfaces for those classes that have nothing to do with each
+other. It does not make any sense to keep many methods inside of a class
+that has nothing related to itself.
+
+
+Dependency Inversion Principle - 
+A higher level modules should not depend on its lower level modules ]classes inside of a program, instead we should have an abstract class that 
+handles both of the higher and lower modules. This makes them more 
+independent of each other, it is dependency inversion.
+Business logic should depend on capabilities, not implementation details.
+
+
+All of these SOLID principles are related to each other and often 
+complement each other while programming.
+
+1. SRP
+
+Learn how to identify responsibilities and separate concerns.
+
+2. OCP
+
+Learn polymorphism, interfaces, and designing for variation.
+
+3. LSP
+
+Learn what makes inheritance and implementations behaviorally correct.
+
+4. ISP
+
+Learn how to design clean, focused interfaces.
+
+5. DIP
+
+Learn abstractions, constructor injection, and decoupling business logic from implementation details.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

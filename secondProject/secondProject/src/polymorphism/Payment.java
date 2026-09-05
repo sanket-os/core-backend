@@ -273,3 +273,79 @@ Polymorphism happens
 more flexible
 
  */
+
+
+
+
+// Clear example for runtime and compile time polymorphism
+//
+//class USER {
+//
+//    String name;
+//    String email;
+//
+//    public USER(String name, String email) {
+//        this.name = name;
+//        this.email = email;
+//    }
+//
+//    public void getInfo() {
+//        System.out.println("Name: " + name + " Email: " + email + " method - I");
+//    }
+//
+//    //   method overloading - compile time polymorphism
+//    public void getInfo(String name, String email) {
+//        System.out.println("Name: " + name + " Email: " + email + " method - II");
+//    }
+//
+//}
+//
+//
+//class Student extends USER {
+//
+//    private String batchName;
+//    private int psp;
+//
+//    public Student(String batchName, int psp, String name, String email) {
+//        super(name, email);
+//        this.batchName = batchName;
+//        this.psp = psp;
+//    }
+//
+//    //    method overriding - runtime polymorphism
+//    @Override
+//    public void getInfo() {
+//        System.out.println("Name: " + name + " Email: " + email + " BatchName: " + batchName + " PSP: " + psp);
+//    }
+//
+//}
+//
+//
+//
+//
+//public class Polymorphism {
+//
+//    public static void main(String[] args) {
+//
+//        USER user = new USER("max", "max@gmail.com");
+//        user.getInfo();
+//
+//        user.getInfo("Caleb", "caleb@yahoo.com");
+//
+//        Student student = new Student("batch 1", 90, "Sam", "sam@gmail.com");
+//        student.getInfo();
+//
+//        USER User = new Student("batch 2", 80, "John", "jj@gmail.com");
+//        User.getInfo();
+//
+//    }
+//
+//}
+
+// OUTPUT -
+
+// Name: max Email: max@gmail.com method - I
+// Name: Caleb Email: caleb@yahoo.com method - II
+// Name: Sam Email: sam@gmail.com BatchName: batch 1 PSP: 90
+// Name: John Email: jj@gmail.com BatchName: batch 2 PSP: 80
+

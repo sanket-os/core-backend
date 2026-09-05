@@ -83,29 +83,123 @@
 //    }
 //}
 
+//public class Main {
+//    public static void main(String[] args) {
+//
+//        bankAccount account = new bankAccount(1000, "SBI", "Savings", "Jack");
+//
+//        account.balanceInfo();
+//
+//        account.displayAccountInfo();
+//
+//        account.deposit(1000);
+//
+//        account.displayAccountInfo();
+//
+//        account.transfer(500);
+//
+//        account.displayAccountInfo();
+//
+//        account.getAccountType();
+//
+////        System.out.println(balance);
+//
+//    }
+//}
+
+
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+
 public class Main {
-    public static void main(String[] args) {
 
-        bankAccount account = new bankAccount(1000, "SBI", "Savings", "Jack");
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        account.balanceInfo();
+        System.out.println("Hello World");
 
-        account.displayAccountInfo();
+        Thread thread = Thread.currentThread();
 
-        account.deposit(1000);
+        System.out.println(Thread.currentThread().getName());
 
-        account.displayAccountInfo();
+        for (int i = 0; i < 100; i++)
+        {
+//            NumberPrinter numberPrinter = new NumberPrinter(i);
+//
+//            numberPrinter.run();
+//
+//            System.out.println();
 
-        account.transfer(500);
+//            Thread newThread = new Thread(numberPrinter);
+//            newThread.run();
+//
+//            newThread.start();
 
-        account.displayAccountInfo();
 
-        account.getAccountType();
+            NumberDoubler numberDoubler = new NumberDoubler(100);
+            ExecutorService executorService = Executors.newFixedThreadPool(2);
+            Future<Integer> integerFuture = executorService.submit(numberDoubler);
 
-//        System.out.println(balance);
+//            while(true) {
+//                System.out.println(integerFuture.isDone());
+//                Thread.sleep(100);
+//            }
+
+//            while(integerFuture.state() != Future.State.SUCCESS) {
+//                System.out.println(integerFuture.isDone());
+//                Thread.sleep(100);
+//            }
+
+            System.out.println(integerFuture.get());
+
+            executorService.shutdown();
+
+
+        }
+
 
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
