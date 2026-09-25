@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Core Backend Project.iml" filepath="$PROJECT_DIR$/.idea/Core Backend Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/Generics/Generics.iml" filepath="$PROJECT_DIR$/Generics/Generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practice/GenericsPractice/GenericsPractice.iml" filepath="$PROJECT_DIR$/Practice/GenericsPractice/GenericsPractice.iml" />
       <module fileurl="file://$PROJECT_DIR$/LibraryManagementSystem/LibraryManagementSystem.iml" filepath="$PROJECT_DIR$/LibraryManagementSystem/LibraryManagementSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/SOLID/SOLID.iml" filepath="$PROJECT_DIR$/SOLID/SOLID.iml" />

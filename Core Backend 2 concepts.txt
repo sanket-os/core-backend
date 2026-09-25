@@ -100,6 +100,95 @@ Learn abstractions, constructor injection, and decoupling business logic from im
 
 
 
+___________________________________________________________________
+
+
+
+Design Patterns -
+
+The systems have similar kind of problems at the design stage and to 
+address these common problems we came up with common solutions which are
+known as design patterns.
+These common desing patterns further solidify the SOLID principles and
+make our code and system easy to maintain over time.
+
+These patterns and principles are applied to the code that is trying to
+mimic the real world scenarious. We can even apply these principles to 
+our real world and try to learn it in a way that connect the dots in our
+life. This makes it more interesting rather than just passive 
+form of learning.
+
+We can even apply SOLID principles to the oraganization or a company that we are trying to run. It is quite similar to the real world than you 
+think.
+
+
+
+A design pattern is a reusable solution to a recurring software design
+ problem.
+
+A simple analogy
+
+Suppose you build houses.
+
+You repeatedly encounter problems like:
+
+How should rooms connect?
+How should doors be organized?
+How can I add another room without redesigning the entire house?
+How can multiple people work on the same house design?
+
+Over time, architects develop common solutions to these recurring problems.
+
+Software design patterns are similar.
+
+
+It has three marjor categories.
+1. Creational Patterns - How objects are created ?
+Singleton, Factory Method, Abstract Factory, Builder, Prototype
+
+2. Structural Patterns - How classes and objects are composed together.
+Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
+
+3. Behavioral Patterns - How objects communicate and distribute 
+responsibilities
+Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer,
+State, Strategy, Template Method, Visitor, Interpreter
+
+
+There are 23 design patterns. 
+You have to understand when and where to use them. Similar to SOLID 
+principles, it is not mandatory to apply them everywhere. Use it only if
+it simplifies our design.
+
+Recommended order for learning -
+Tier 1 — Essential
+1. Strategy
+2. Factory
+3. Builder
+4. Observer
+5. Adapter
+6. Decorator
+7. Facade
+
+Tier 2 — Very useful
+8. State
+9. Command
+10. Chain of Responsibility
+11. Proxy
+12. Template Method
+
+Tier 3 — Learn when needed
+13. Abstract Factory
+14. Composite
+15. Iterator
+16. Mediator
+17. Memento
+18. Prototype
+19. Singleton
+20. Bridge
+21. Flyweight
+22. Visitor
+23. Interpreter
 
 
 

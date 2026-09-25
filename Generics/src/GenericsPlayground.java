@@ -57,6 +57,12 @@ public class GenericsPlayground {
     public static <T> T identity(T value) {
         return value;
     }
+//    Think of <T> as saying:
+
+//  "Before you read the rest of this method declaration, know that T is a type placeholder."
+
+//Simple analogy
+//You can think of T like a variable, but instead of storing a value, it represents a type.
 
     /*
      * ------------------------------------------------------------
