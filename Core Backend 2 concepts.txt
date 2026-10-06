@@ -193,6 +193,63 @@ Tier 3 — Learn when needed
 
 
 
+Singleton Pattern - 
+It is a design pattern that we use when we do not want many instances of an
+object. Creating many instances will take up more resources and memory 
+unnecessarily. Therefore we use singleton design pattern where we create
+a private, static and final instance of a class. This instance is only
+called from a method inside of that class. We can wrap that method in a 
+holder function to facilitate the lazy initialization. Here we create the
+instance only when needed instead of everytime the code runs. This way we
+avoid eager initialization. Only the method inside of a class can create
+and return that instance when called by the outside object. 
+
+We use this for a common and shared functionality is needed amongst many
+objects of the class. This way we avoid the complexity by creating large
+number of instances for large number of objects. Logger is a classic 
+example for the singleton design pattern. We use logger to make the records
+of every interaction with the system. This helps us to keep an eye on 
+what is happening in our system. We can ensure our system works well in 
+this way and errors or exceptions are logged if any problem occurs. 
+
+We don't need the separate logger instance for every object, we just create
+one, and it is used by many objects as a common instance to keep the track
+of many logs. We can use this at many places where a common functionality 
+is required in an efficient manner like notifications, payment systems etc.
+
+It does not mean that we must use singleton design pattern everywhere. You
+have to ask a few questions before we use it. Does it helo to create a 
+single instance here, instead of many ? Should we keep that instance inside
+a holder method for lazy initialization ? If yes, then we should consider
+using it. Otherwise it is better to keep it simple. 
+
+You know there is one thing that I have realized while studying computer 
+science, that is even while solving the data structures and algorithms 
+problems, we optimize for the worst cast scenario. But in real procuction
+systems, using the best time time and space complexity all the time is 
+not really good. It introduces complexity and unintentional behaviour in 
+the system. We just might be well off with an average case time complexity
+or sometimes even below average case time complexity. It is like the saying
+"Hope for the best, prepare for the worst." Except the worst is not always
+the case, many times it hangs around somewhere in the middle, neither best
+nor worst. In computer science we are trying to use computers to solve the
+real world problem. Most of its applications are tailored towards our real
+world just like every other scientific standards like a foot is the 
+mearurement of an actual human foot taken as a standard for calculations in 
+mathematics. All of our science is based on our human body and its 
+interactions with outside world and our perception of it. We are trying
+to get the science now which is out of our perception as an observer or
+experiencer. It is quite surreal to think about something so abstract 
+that is out of our understanding, our senses. And now we are making our
+technology based on doing the research for that science which is out of 
+our own senses and perception. It is called field of quantum. We dont
+understand it that well but we are getting closer to it. And now we have to
+ code that field in our computers. It feels like the matrix & simulation
+theory is coming to life. We will soon unlock many secrets of the world
+that will completely change our understanding of the reality and using 
+new computers for that. The computer of next generation will look entirely
+different than the one that I grew up with. It is quite exciting isn't it ?
+
 
 
 
